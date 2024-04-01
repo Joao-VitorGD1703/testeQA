@@ -1,0 +1,259 @@
+/* @import url(../scss/colors.scss); */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap');
+
+  :root {
+    --color-bg: #100370;
+    --color-bg-2: #1B2560;
+    --color-bg-dark: #030303;
+    --color-text: #FFF;
+    --color-pink: #EC1650;
+    --color-pink-light: #eb6488;
+    --color-soft:  #F3F3F3;
+    --color-dark: #707070; 
+    --color-gray: #a1a1a1; 
+    --color-gray-bg: #F0F0F0; 
+    --color-gray-md: #5C5C5C; 
+    --color-green-light: #4CCC28;
+    --color-new-candidate: #C0DAFD;
+    --color-interview: #77AFFA;
+    --color-approved: #8BDB88;
+    --color-denied: #FF86B9;
+    --color-cancelled: #CECECE;
+    --font-bg: 34px;
+    --font-bbg: 54px;
+    --font-md: 28px;
+    --font-sm: 24px;
+    --font-ssm: 22px;
+    --font-ussm: 18px;
+    --font-fami:'Nunito', sans-serif;
+    --font-pop: 'Poppins', sans-serif;
+    --font-Syne: 'Syne', sans-serif;
+    --font-Avenir: 'Avenir', sans-serif;
+  
+  }
+  
+  body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: var(--font-pop);
+    
+    .show-mobile{
+      display: none !important;
+    }
+
+    .white{
+      color: white;
+    }
+
+    .black {
+      color: black;
+    }
+
+    .pink {
+      color: #EC1650;
+    }
+
+    .btn-text{
+      background-color: transparent;
+      width: auto !important;
+      height: auto !important;
+      cursor: pointer;
+      font-family: var(--font-pop);
+    }
+    
+    .btn-border{
+      background-color: transparent;
+      border: 1px solid white;
+      border-radius: 2em;
+      color: white;
+      padding: 12px 22px;
+    }
+
+    .btn-border-blue:disabled{
+      opacity: 0.4;
+      cursor: initial;
+    }
+    
+    .btn-primary{
+      background-color: var(--color-bg-2);
+      border-radius: 2em;
+      color: white;
+      /* padding: 12px 22px; */
+      font-size: var(--font-ssm);
+      font-weight: bold;
+      font-family: var(--font-pop);
+      height: 50px;
+    }
+    
+    .btn-border-blue{
+      background-color: transparent;
+      border: 1px solid var(--color-bg);
+      border-radius: 2em;
+      color: var(--color-bg);
+      /* padding: auto; */
+      font-size: var(--font-ssm);
+      font-weight: bold;
+      font-family: var(--font-pop);
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .btn-clean{
+      background-color: transparent;
+      border: none;
+    }
+
+    .page-title{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .vertical-separator{
+        padding: 50px 0px;
+    }
+
+    .container-box{
+      background-color: var(--color-gray-bg);
+      border-radius: 20px;
+      padding: 35px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .container-box-border{
+      border: 1px solid var(--color-bg-2);
+      border-radius: 20px;
+      padding: 22px;
+    }
+
+  }
+  
+  .toggle{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  
+  .switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+    margin: 0px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #fff;
+      border: 1px solid #adb5bd;
+      transition: .4s;
+      border-radius: 30px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.27em;
+    bottom: 0.25em;
+    background-color: #adb5bd;
+    transition: .4s;
+  } 
+
+  input:checked+.slider {
+      background-color: #EC1650;
+      border: 1px solid #EC1650;
+  }
+
+  input:focus+.slider {
+      box-shadow: 0 0 1px #EC1650;
+  }
+
+  input:checked+.slider:before {
+      transform: translateX(1.4em);
+      background-color: #fff;
+  }
+  
+  button{
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 1680px) {
+    :root {
+      --color-bg: #100370;
+      --color-bg-dark: #030303;
+      --color-text: #FFF;
+      --color-pink: #EC1650;
+      --color-soft:  #F3F3F3;
+      --color-dark: #707070; 
+      --font-bg: 34px;
+      --font-bbg: 54px;
+      --font-md: 24px;
+      --font-sm: 20px;
+      --font-ssm: 16px;
+      --font-ussm: 12px;
+      --font-fami:'Nunito', sans-serif;
+      --font-pop: 'Poppins', sans-serif;
+      --font-Syne: 'Syne', sans-serif;
+      --font-Avenir: 'Avenir', sans-serif;
+    
+    }
+    
+    body{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+  }
+  
+  @media screen and (max-width: 500px) {
+
+    .show-mobile{
+      display: block !important;
+    }
+
+    .hide-mobile{
+      display: none !important;
+    }
+
+		.page-title{
+      margin-bottom: 30px;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+    .page-title h1{
+      font-size: 28px;
+      
+    }
+  
+    .vertical-separator{
+      padding: 25px 0px;
+    }
+
+  }
