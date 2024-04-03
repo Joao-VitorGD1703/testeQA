@@ -24,9 +24,9 @@ import  SideBar  from "../components/SideBar.vue";
 
 .public {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
-    margin: 0em auto auto auto;
+    margin:  0em;
     justify-content: center;
     flex-direction: column;
     padding: 5em 0em 2em 0em;
@@ -34,6 +34,7 @@ import  SideBar  from "../components/SideBar.vue";
 
     .content {
         width: 60%;
+        height: 100%;
         display: flex;
         margin: 2em auto auto auto;
         justify-content: center;

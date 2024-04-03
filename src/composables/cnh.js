@@ -1,11 +1,12 @@
 export function gerarCNH() {
-    var n = 9;
+    var n = 10; // Mudei o valor de 'n' para 10, já que a CNH possui 10 dígitos
     var cnh = '';
-    for (var i = 0; i < 9; i++) {
-        cnh += Math.floor(Math.random() * n);
+    for (var i = 0; i < n; i++) { // Alterei o loop para iterar até 10
+        cnh += Math.floor(Math.random() * 10); // Modifiquei para gerar um dígito de 0 a 9
     }
     return cnh;
 }
+
 
 // Função para gerar um número de CNH válido
 export function gerarrCNH() {

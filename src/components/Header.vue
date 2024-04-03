@@ -5,7 +5,7 @@
 <template>
  <header class="cont-princ">
     <div class="title">
-        <h1>testQA</h1>
+        <h1>TesteQA</h1>
     </div>
     <div>
         <div class="input-group b m-auto w-75">
@@ -21,7 +21,7 @@
 
 .cont-princ{
     width: 100%;
-    height: 10vh;
+    height: 10%;
     display: flex;
     justify-content: center;
     flex-direction: row;

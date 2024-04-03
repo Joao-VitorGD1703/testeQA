@@ -31,7 +31,8 @@ const getCheckedValue = () => {
 <template>
     <Layout>
         <div class="card-apresentacao">
-            <div class="mb-3">
+            <h2 class="mb-2">CNPJ</h2>
+            <div class="mt-2 mb-5">
                 <p>Aproveite nosso gerador de CNPJ: clique em "Gerar CNPJ" e pronto! Um novo número de CNPJ válido será
                     gerado instantaneamente. Além disso, você tem a opção de incluir ou não os pontos entre os números.
                 </p>
@@ -45,9 +46,9 @@ const getCheckedValue = () => {
             </div>
             <div class="input-group me-1 w-75">
 
-                <button class="btn btn-outline-secondary rounded-start-4" type="button" @click="generateCNPJFinal"
+                <button class="btn btn-outline-secondary " type="button" @click="generateCNPJFinal"
                     id="button-addon1">Gerar</button>
-                <input type="text" class="form-control rounded-end-4" placeholder="" aria-label="Example text with button addon"
+                <input type="text" class="form-control " placeholder="" aria-label="Example text with button addon"
                     aria-describedby="button-addon1" v-model="respCnpj">
             </div>
         </div>

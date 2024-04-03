@@ -24,7 +24,7 @@ import {useGoTo} from '@/composables/utils'
 
 .cont-princ{
     width: 90%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     border-radius: 0.2em;
@@ -34,7 +34,7 @@ import {useGoTo} from '@/composables/utils'
     text-align: left;
     h3{
       font-size: 1.5em;
-      margin: 0.2em 0.1em;
+      margin: 0.2em 0.3em;
     }
 
     ul{
@@ -59,6 +59,7 @@ import {useGoTo} from '@/composables/utils'
             display: flex;
             justify-content: left;
             align-items: center;
+            padding: 0.2em 0.5em;
 
 
           /*  -webkit-box-shadow: 1px 10px 19px -9px rgba(0,0,0,0.75);
