@@ -9,8 +9,8 @@
     </div>
     <div>
         <div class="input-group b m-auto w-75">
-            <input type="text" class="form-control rounded-start-4" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-            <button class="btn btn-outline-light rounded-end-4" type="button" id="button-addon1">Button</button>
+            <input type="text" class="form-control " placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+            <button class="btn btn-outline-light " type="button" id="button-addon1">Button</button>
           </div>
     </div>
  </header>   
