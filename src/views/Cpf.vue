@@ -38,14 +38,13 @@ const getCheckedValue = () => {
                     gerado instantaneamente. Além disso, você tem a opção de incluir ou não os pontos entre os números.
                 </p>
             </div>
+           
             <div class="form-check my-4">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" @click="getCheckedValue"
-                    id="flexRadioDefault1" v-model="isChecked">
-                <label class="form-check-label" for="flexRadioDefault1">
-                    Sem caracter especial
+                <input class="form-check-input" type="checkbox" id="toggleButton" v-model="isChecked">
+                <label class="form-check-label" for="toggleButton">
+                  {{ isChecked ? 'Com caracter especial' : 'Sem caracter especial' }}
                 </label>
-            </div>
-            <div class="input-group my-4 me-1 w-75">
+              </div>            <div class="input-group my-4 me-1 w-75">
 
                 <button class="btn btn-outline-secondary " type="button" @click="generateCPFFinal"
                     id="button-addon1">Gerar</button>
