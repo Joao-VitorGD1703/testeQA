@@ -64,7 +64,7 @@ const copyText = () => {
                     aria-describedby="button-addon1" v-model="respCpf">
                     
                 </div>
-                <button class=" rounded  fs-5 btn btn-outline-primary px-1" type="button"  @click="copyText">Copiar</button>
+                <button class=" rounded  fs-5 btn btn-outline-primary px-1" type="button"  @click="copyText"><p>Copiar</p></button>
         </div>
     </Layout>
 </template>
