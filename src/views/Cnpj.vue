@@ -61,8 +61,10 @@ const copyText = () => {
                     id="button-addon1">Gerar</button>
                 <input type="text" class="form-control " placeholder="" aria-label="Example text with button addon"
                     aria-describedby="button-addon1" v-model="respCnpj">
+                    <button style="border: none; background-color: transparent;" @click="copyText" type="button"><i 
+                            class="fa-regular fa-copy" style="color: #74C0FC; width: 2.2em; height: 2.2em;"> <button></button></i>
+                    </button>
                 </div>
-                <button class=" rounded mt-4 fs-5 btn btn-outline-primary px-1" type="button"  @click="copyText">Copiar</button>
 
         </div>
     </Layout>

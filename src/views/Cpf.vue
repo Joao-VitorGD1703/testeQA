@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import Layout from '@/layout/MainLayout.vue';
 import { gerarCPF } from '@/composables/cpf.js'
-import {useRemoveMask} from '@/composables/utils'
+import { useRemoveMask } from '@/composables/utils'
 
 let respCpf = ref('');
 let isChecked = ref(false)
@@ -13,7 +13,7 @@ const generateCPFFinal = async () => {
         respCpf.value = await useRemoveMask(teste)
         // console.log("teste " + useRemoveMask(teste));
 
-        
+
     }
     if (isChecked.value == false) {
         respCpf.value = gerarCPF()
@@ -50,27 +50,30 @@ const copyText = () => {
                     gerado instantaneamente. Além disso, você tem a opção de incluir ou não os pontos entre os números.
                 </p>
             </div>
-           
+
             <div class="form-check my-4">
                 <input class="form-check-input" type="checkbox" id="toggleButton" v-model="isChecked">
                 <label class="form-check-label" for="toggleButton">
-                  {{ isChecked ? 'Com caracter especial' : 'Sem caracter especial' }}
+                    {{ isChecked ? 'Com caracter especial' : 'Sem caracter especial' }}
                 </label>
-              </div>            <div class="input-group my-4 me-1 w-75">
+            </div>
+            <div class="input-group my-4 me-1 w-75">
 
                 <button class="btn btn-outline-secondary " type="button" @click="generateCPFFinal"
                     id="button-addon1">Gerar</button>
                 <input type="text" class="form-control " placeholder="" aria-label="Example text with button addon"
                     aria-describedby="button-addon1" v-model="respCpf">
-                    
-                </div>
-                <button class=" rounded  fs-5 btn btn-outline-primary px-1" type="button"  @click="copyText"><p>Copiar</p></button>
+                <button style="border: none; background-color: transparent;" @click="copyText" type="button"><i
+                        class="fa-regular fa-copy" style="color: #74C0FC; width: 2.2em; height: 2.2em;">
+                        <button></button></i>
+                </button>
+
+            </div>
+
         </div>
     </Layout>
 </template>
 
 <style lang="scss" scoped>
 @import url(../assets/base.css);
-
-
 </style>

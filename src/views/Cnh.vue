@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import Layout from '@/layout/MainLayout.vue';
 import { gerarCNH } from '@/composables/cnh.js'
 
-let respCnh= ref('');
+let respCnh = ref('');
 let isChecked = ref(false)
 let verificar = ref(true)
 const copyText = () => {
@@ -37,23 +37,23 @@ const getCheckedValue = () => {
                     gerado instantaneamente. Além disso, você tem a opção de incluir ou não os pontos entre os números.
                 </p>
             </div>
-           
+
             <div class="input-group my-4 me-1 w-75">
 
                 <button class="btn btn-outline-secondary" type="button" @click="generateCNHFinal"
                     id="button-addon1">Gerar</button>
                 <input type="text" class="form-control " placeholder="" aria-label="Example text with button addon"
                     aria-describedby="button-addon1" v-model="respCnh">
-                    
+
+                    <button style="border: none; background-color: transparent;" @click="copyText" type="button"><i 
+                            class="fa-regular fa-copy" style="color: #74C0FC; width: 2.2em; height: 2.2em;"> <button></button></i>
+                    </button>
                 </div>
-                <button class=" rounded  fs-5 btn btn-outline-primary px-1" type="button"  @click="copyText">Copiar</button>
         </div>
-    
+
     </Layout>
 </template>
 
 <style lang="scss" scoped>
 @import url(../assets/base.css);
-
-
 </style>
