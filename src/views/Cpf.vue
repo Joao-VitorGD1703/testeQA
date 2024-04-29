@@ -26,6 +26,18 @@ const generateCPFFinal = async () => {
 const getCheckedValue = () => {
     isChecked.value = !isChecked.value
 }
+const copyText = () => {
+    const text = respCpf.value;
+    if (text) {
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                console.log('Texto copiado com sucesso!');
+            })
+            .catch((error) => {
+                console.error('Falha ao copiar o texto:', error);
+            });
+    }
+}
 </script>
 
 <template>
@@ -50,7 +62,9 @@ const getCheckedValue = () => {
                     id="button-addon1">Gerar</button>
                 <input type="text" class="form-control " placeholder="" aria-label="Example text with button addon"
                     aria-describedby="button-addon1" v-model="respCpf">
-            </div>
+                    
+                </div>
+                <button class=" rounded  fs-5 btn btn-outline-primary px-1" type="button"  @click="copyText">Copiar</button>
         </div>
     </Layout>
 </template>
