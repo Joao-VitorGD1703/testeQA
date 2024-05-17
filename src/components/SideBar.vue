@@ -51,7 +51,7 @@ import {useGoTo} from '@/composables/utils'
             width: 100%;
             height: 2.5em;
 
-            //margin: 0.1em auto;
+            // margin: 0.1em auto;
             border: none;
             border-bottom: 1px solid var(--fifthy);
             background-color: var(--forthy);

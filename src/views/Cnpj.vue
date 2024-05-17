@@ -4,6 +4,8 @@ import Layout from '@/layout/MainLayout.vue';
 import { generateCNPJ } from '@/composables/cnpj.js'
 import { useRemoveMask } from '@/composables/utils'
 import { useClipboard } from '@vueuse/core';
+import {useToast} from '@/composables/utils'
+
 
 const clipboard = useClipboard();
 
@@ -31,6 +33,7 @@ const copyText = () => {
     if (text) {
         navigator.clipboard.writeText(text)
             .then(() => {
+                useToast().success("CNPJ copiado com sucesso!")
                 console.log('Texto copiado com sucesso!');
             })
             .catch((error) => {

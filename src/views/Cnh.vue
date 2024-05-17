@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import Layout from '@/layout/MainLayout.vue';
 import { gerarCNH } from '@/composables/cnh.js'
+import {useToast} from '@/composables/utils'
 
 let respCnh = ref('');
 let isChecked = ref(false)
@@ -11,6 +12,7 @@ const copyText = () => {
     if (text) {
         navigator.clipboard.writeText(text)
             .then(() => {
+                useToast().success(" CNH copiado com sucesso!")
                 console.log('Texto copiado com sucesso!');
             })
             .catch((error) => {

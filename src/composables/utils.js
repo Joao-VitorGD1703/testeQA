@@ -1,5 +1,10 @@
 import router from '@/routes/index.js'
+import { createToaster } from "@meforma/vue-toaster";
 
+const toaster = createToaster({
+  position: 'bottom',
+  duration: 4000
+})
 export const useToCPF = (value) => {
     if (!value) return ''
     if (value.length !== 11) return value
@@ -42,6 +47,9 @@ export const useGoTo = (path) => {
     router.push(path);
   }
 
+  export const useToast = () => {
+    return toaster
+  }
   
   export  const useRemoveMask = (string) => {
     if (!string) return string

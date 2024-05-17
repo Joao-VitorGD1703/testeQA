@@ -3,6 +3,8 @@ import { ref } from 'vue'
 import Layout from '@/layout/MainLayout.vue';
 import { gerarCPF } from '@/composables/cpf.js'
 import { useRemoveMask } from '@/composables/utils'
+import {useToast} from '@/composables/utils'
+
 
 let respCpf = ref('');
 let isChecked = ref(false)
@@ -31,6 +33,8 @@ const copyText = () => {
     if (text) {
         navigator.clipboard.writeText(text)
             .then(() => {
+                useToast().success("CPF copiado com sucesso!")
+
                 console.log('Texto copiado com sucesso!');
             })
             .catch((error) => {
