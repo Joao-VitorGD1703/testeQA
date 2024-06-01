@@ -1,18 +1,33 @@
 <script setup>
 import  Header  from "../components/Header.vue";
 import  SideBar  from "../components/SideBar.vue";
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+
+const isMobile = ref(window.innerWidth <= 800);
+
+const handleResize = () => {
+  isMobile.value = window.innerWidth <= 800;
+};
+
+onMounted(() => {
+  window.addEventListener('resize', handleResize);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', handleResize);
+});
 </script>
 
 <template>
     <main class="public">
         <Header />
         <div class="content row">
-            <div class="col-3">
+            <div :class="isMobile ? 'esconder col-md-0' : 'col-3'">
                 <SideBar/>
             </div>
-            <div class="col-9">
+            <div :class="isMobile ? 'col-12' : 'col-9'">
                 <slot></slot>
-            </div>
+              </div>
         </div>
 
     </main>
@@ -53,6 +68,24 @@ import  SideBar  from "../components/SideBar.vue";
       
         margin: 5em auto auto auto;
        
+    }
+}
+}
+@media screen and (max-width: 800px) {
+
+    .public {
+
+        .esconder {
+            display: none !important;
+        }
+      .content {
+      
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 2em auto;
+        justify-content: center;
+        flex-direction: row;
     }
 }
 }

@@ -1,0 +1,14 @@
+[
+    {
+      "nome": "CNPJ",
+      "url": "/cnpj"
+    },
+    {
+      "nome": "CPF",
+      "url": "/cpf"
+    },
+    {
+      "nome": "CNH",
+      "url": "/cnh"
+    }
+  ]  
